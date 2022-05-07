@@ -1,3 +1,4 @@
+from xmlrpc.client import boolean
 from django.db import models
 
 # Create your models here.
@@ -5,3 +6,10 @@ from django.db import models
 class Task(models.Model):
     # An ID field is automatically added to all Django models
     description = models.CharField(max_length=255)
+    completed = models.BooleanField(default=False)
+
+class Note(models.Model):
+    # An ID field is automatically added to all Django models
+    text = models.CharField(max_length=255)
+   
+
